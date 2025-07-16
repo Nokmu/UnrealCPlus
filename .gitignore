@@ -1,37 +1,81 @@
-# === Unreal Engine ===
+# ======================================
+# Unreal Engine 프로젝트용 .gitignore
+# macOS + Windows + C++ + VS + Xcode
+# ======================================
+
+# --- Unreal Engine 빌드 산출물 ---
 Binaries/
 DerivedDataCache/
 Intermediate/
 Saved/
 Build/
 
-# === OS별 시스템 파일 ===
-.DS_Store
-Thumbs.db
-
-# === IDE 관련 ===
-.vs/
-.vscode/
-*.sln
+# --- 프로젝트 자동 생성 파일 ---
 *.VC.db
 *.VC.opendb
+*.sdf
+*.opensdf
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-# === Xcode ===
+# --- IDE 관련 ---
+.vs/
+.vscode/
+.vsconfig       # ← Visual Studio 설치 구성 파일 무시
+*.sln           # 협업하지 않을 경우 무시
+*.xcodeproj/
 *.xcworkspace
-*.xcuserstate
 *.xcuserdata
-*.xccheckout
-*.xcodeproj/project.xcworkspace/xcuserdata
+*.xcuserstate
 *.idea/
 
-# === 기타 ===
+# --- macOS 시스템 파일 ---
+.DS_Store
+
+# --- Windows 시스템 파일 ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- 백업 및 로그 ---
 *.log
 *.tmp
 *.bak
-
-# === Git ===
+*.old
 *.orig
 
-# Optional: Ignore crash reports, backups
+# --- Git 관련 임시 파일 ---
+*.rej
+*.patch
+*.diff
+
+# --- Crash dumps (optional) ---
 *.dmp
-*.backup
+*.mdmp
+
+# --- Python 등 기타 빌드 스크립트 캐시 (optional) ---
+__pycache__/
+*.py[cod]
+
+# --- 프로젝트 내 불필요한 캐시 등 ---
+*.ipch
+*.aps
+*.ncb
+*.ilk
+*.exp
+*.obj
+*.pch
+*.pdb
+*.idb
+*.tlog
+*.lastbuildstate
+*.iobj
+*.ipdb
+*.rsp
+*.sbr
+*.tlh
+*.tli
+*.log
+*.trace
